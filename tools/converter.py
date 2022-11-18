@@ -323,6 +323,13 @@ class FreesurferConverter:
                     val = self.string_formats(argstr=val, name=nm)
                 metadata_pdr[key_nm_pdr] = val
 
+
+########################
+        if self.interface_spec["override_type"]:
+            field_name = getattr(field, "field")
+            filed_type = ensure_list(getattr(field, "name_source"))
+########################
+
         if getattr(field, "name_template"):
             template = getattr(field, "name_template")
             name_source = ensure_list(getattr(field, "name_source"))

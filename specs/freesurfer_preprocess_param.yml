@@ -6,6 +6,9 @@ ReconAll:
   output_templates:
     out_file: "{in_file}_brain"
     subjects_dir: "{subjects_dir}_ReconAll"
+  override_type:
+    field_names: [subjects_dir]
+    field_type: [STR]
 
   doctest:
     T1_files: "test.nii.gz"
